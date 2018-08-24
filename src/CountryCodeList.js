@@ -26,7 +26,7 @@ class CountryCodeList extends React.Component {
 
   render(){
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, props.containerStyle]}>
         <Search
           afterCancel={this.clearQuery}
           afterDelete={this.clearQuery}
@@ -165,10 +165,11 @@ const styles = StyleSheet.create({
 });
 
 CountryCodeList.defaultProps = {
-  headerBackground: 'rgb(245, 245, 245)',
-  cellHeight: 44.5,
-  sectionHeaderHeight: 30,
-  onClickCell: () => {}
+	headerBackground: "rgb(245, 245, 245)",
+	cellHeight: 44.5,
+	sectionHeaderHeight: 30,
+	onClickCell: () => {},
+	containerStyle: {},
 };
 
 module.exports = CountryCodeList;
