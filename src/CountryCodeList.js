@@ -26,7 +26,7 @@ class CountryCodeList extends React.Component {
 
   render(){
     return (
-      <View style={[styles.container, props.containerStyle]}>
+      <View style={[styles.container, this.props.containerStyle]}>
         <Search
           afterCancel={this.clearQuery}
           afterDelete={this.clearQuery}
